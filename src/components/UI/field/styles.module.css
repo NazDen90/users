@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    width: 100px;
+    height: 40px;
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 13px;
+}
+
+.label {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}

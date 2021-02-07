@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getUsers } from "./redux/actions/usersActions";
+
+import UsersPage from "./pages/users";
+import UserPage from "./pages/user";
+
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getUsers(100));
+	}, [dispatch]);
+
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Switch>
+					<Route exact path={"/"} component={UsersPage} />
+					<Route path={"/:id"} component={UserPage} />
+				</Switch>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

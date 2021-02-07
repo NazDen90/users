@@ -1,0 +1,20 @@
+.wrapper {
+    display: grid;
+    width: 300px;
+    height: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 5px 35px rgba(181, 184, 193, 1), -2px 2px 35px rgba(181, 184, 193, 1);
+    transition: box-shadow .3s;
+}
+
+.wrapper:hover {
+    cursor: pointer;
+    box-shadow: 4px 5px 35px rgba(181, 184, 193, .3), -2px 2px 35px rgba(181, 184, 193, .3);
+}
+
+.wrapper:active {
+    box-shadow: inset 4px 5px 35px rgba(181, 184, 193, .3), inset -2px 2px 35px rgba(181, 184, 193, .3);
+}

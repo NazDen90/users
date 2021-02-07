@@ -1,0 +1,16 @@
+.wrapper {
+    padding: 50px;
+    width: max-content;
+    height: max-content;
+    display: grid;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 4px 5px 35px rgba(181, 184, 193, 1), -2px 2px 35px rgba(181, 184, 193, 1);
+    grid-template-areas:
+        'avatarUrl followers following'
+        'avatarUrl name bio'
+        'avatarUrl email company'
+        'avatarUrl createdAt blog';
+    align-content: center;
+    grid-gap: 10px;
+}
