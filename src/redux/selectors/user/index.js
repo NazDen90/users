@@ -15,7 +15,7 @@ export const selectUser = (state) => {
 		createdAt: new Date(user.created_at).toDateString(),
 		company: user.company,
 		email: user.email,
-		blog: user.blog ? user.blog.replace("https:", "") : user.blog,
+		blog: user.blog ? user.blog.split(":")[1] : user.blog,
 	};
 
 	return { ...userState, user: user };

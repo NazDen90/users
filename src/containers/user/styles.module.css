@@ -4,6 +4,7 @@
     height: max-content;
     display: grid;
     margin: 0 auto;
+    overflow: unset;
     border-radius: 10px;
     box-shadow: 4px 5px 35px rgba(181, 184, 193, 1), -2px 2px 35px rgba(181, 184, 193, 1);
     grid-template-areas:

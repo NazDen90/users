@@ -1,9 +1,12 @@
 .wrapper {
     display: grid;
     width: 100px;
-    height: 40px;
+    height: 50px;
     grid-template-rows: repeat(2, 1fr);
     font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: auto;
+    padding: 10px;
 }
 
 .label {

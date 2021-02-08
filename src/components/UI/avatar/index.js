@@ -6,7 +6,7 @@ const Avatar = ({ url, size, grid }) => (
 		width={size}
 		height={size}
 		src={url}
-		alt=""
+		alt="avatar"
 	/>
 );
 

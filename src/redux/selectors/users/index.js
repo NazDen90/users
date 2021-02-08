@@ -10,7 +10,7 @@ export const selectUsers = (state) => {
 		id: user.id,
 		login: user.login,
 		avatarUrl: user["avatar_url"],
-		profileLink: user["html_url"].replace("https:", ""),
+		profileLink: user["html_url"].split(":")[1],
 	}));
 	return { ...userState, users: users };
 };

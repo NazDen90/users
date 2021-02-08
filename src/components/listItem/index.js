@@ -1,10 +1,10 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import Avatar from "../UI/avatar";
 import Field from "../UI/field";
 
 import styles from "./styles.module.css";
-import { useHistory } from "react-router-dom";
 
 const ListItem = ({ item }) => {
 	const history = useHistory();

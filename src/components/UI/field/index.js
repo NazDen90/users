@@ -6,7 +6,14 @@ import styles from "./styles.module.css";
 const Field = ({ data, link, label, grid }) => {
 	if (link) {
 		return (
-			<Link style={{ width: "min-content" }} target={"_blank"} to={link}>
+			<Link
+				style={grid ? { gridArea: grid } : { width: "min-content" }}
+				onClick={(e) => {
+					e.stopPropagation();
+				}}
+				target={"_blank"}
+				to={link}
+			>
 				{data}
 			</Link>
 		);
